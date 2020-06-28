@@ -1,5 +1,5 @@
 const myHeading = document.querySelector('h1');
-myHeading.textContent = 'Hello world!';
+myHeading.textContent = 'Hello worlds!';
 
 fetch('https://reqres.in/api/users')
     .then(res => res.json())
