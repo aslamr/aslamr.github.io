@@ -1,6 +1,11 @@
 const myHeading = document.querySelector('h1');
 myHeading.textContent = 'Hello WWorlds!';
 
+
+fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits')
+  .then(response => response.json())
+  .then(commits => alert(commits[0].author.login));
+
 fetch('https://reqres.in/api/users')
     .then(res => res.json())
     .then(res => {
