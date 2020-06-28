@@ -1,16 +1,21 @@
 const myHeading = document.querySelector('h1');
-myHeading.textContent = 'Hello KWorldsk!';
+myHeading.textContent = 'Hello HWorldsk!';
 
 
-fetch('"https://github.com/aslamr/minute_website/commits"')
-  .then(response => response.json())
-  .then(commits => alert(commits[0].author.login));
+(async () => {
+let response = await fetch('http://api.alquran.cloud/v1/ayah/262/en.asad');
+
+let text = await response.text(); // read response body as text
+
+alert(text);
 
 
+(async () => {
+let response = await fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits');
 
-fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits')
-  .then(response => response.json())
-  .then(commits => alert(commits[0].author.login));
+let text = await response.text(); // read response body as text
+
+alert(text);
 
 
 
