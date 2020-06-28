@@ -1,12 +1,12 @@
 const myHeading = document.querySelector('h1');
-myHeading.textContent = 'Hello LWorldsk!';
+myHeading.textContent = 'Hello HWorldsk!';
 
-let response = await fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits');
+let url = 'https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits';
+let response = await fetch(url);
 
-let text = await response.text(); // read response body as text
+let commits = await response.json(); // read response body and parse as JSON
 
-alert(text.slice(0, 80) + '...');
-
+alert(commits);
 
 
 fetch('https://reqres.in/api/users')
