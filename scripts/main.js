@@ -1,13 +1,5 @@
 const myHeading = document.querySelector('h1');
-myHeading.textContent = 'Hello HWorldsk!';
-
-
-(async () => {
-let response = await fetch('http://api.alquran.cloud/v1/ayah/262/en.asad');
-
-let text = await response.text(); // read response body as text
-
-alert(text);
+myHeading.textContent = 'Hello TWorldsk!';
 
 
 (async () => {
