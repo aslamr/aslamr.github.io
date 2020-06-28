@@ -1,5 +1,5 @@
 const myHeading = document.querySelector('h1');
-myHeading.textContent = 'Hello WWorlds!';
+myHeading.textContent = 'Hello Worldsk!';
 
 
 fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits')
