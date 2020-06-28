@@ -1,12 +1,5 @@
 const myHeading = document.querySelector('h1');
-myHeading.textContent = 'Hello HWorldsk!';
-
-let url = 'https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits';
-let response = await fetch(url);
-
-let commits = await response.json(); // read response body and parse as JSON
-
-alert(commits);
+myHeading.textContent = 'Hello ZWorldsk!';
 
 
 fetch('https://reqres.in/api/users')
