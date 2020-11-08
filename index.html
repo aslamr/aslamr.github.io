@@ -9,7 +9,7 @@
 <body>
     <div id="myData"></div>
     <script>
-        fetch('people.json')
+        fetch('covid.json')
             .then(function (response) {
                 return response.json();
             })
@@ -23,7 +23,7 @@
             var mainContainer = document.getElementById("myData");
             for (var i = 0; i < data.length; i++) {
                 var div = document.createElement("div");
-                div.innerHTML = 'Name: ' + data[i].firstName + ' ' + data[i].lastName;
+                div.innerHTML = 'Name: ' + data[i].today_new_deaths + ' ' + data[i].today_new_open_cases;
                 mainContainer.appendChild(div);
             }
         }
