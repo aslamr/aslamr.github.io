@@ -20,16 +20,23 @@ document.getElementById("demo").innerHTML = person.name + "," + person.age + ","
 </script>
     
 <h2>JavaScript Display Object Properties</h2>
-
-<p id="show"></p>
-
-<script>
-var person = {http://time.jsontest.com/};
-
-document.getElementById("show").innerHTML = person.date + "," + person.time + ",";
+  
+    <script type="text/javascript">
+      var radr;
+      fetch('http://time.jsontest.com/')
+      .then(response => response.json())
+      .then(json => {
+         radr = JSON.stringify(json)
+         document.getElementById('test').innerHTML = radr;
+       });    
 </script>
 
 </body>
+    
+    
+</script>
+    
+    
 
 </html>
   
