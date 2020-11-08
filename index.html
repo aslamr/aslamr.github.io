@@ -1,43 +1,33 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Today's Date</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON Test</title>
 </head>
-
 <body>
-    
-<h2>JavaScript Display Object Properties</h2>
-
-<p id="demo"></p>
-
-<script>
-var person = {name:"John", age:50, city:"New York"};
-
-document.getElementById("demo").innerHTML = person.name + "," + person.age + "," + person.city;
-</script>
-    
-<h2>JavaScript Display Object Property</h2>
-  
-    <script type="text/javascript">
-      var radr;
-      fetch('http://time.jsontest.com/')
-      .then(response => response.json())
-      .then(json => {
-         radr = JSON.stringify(json)
-         document.getElementById('date').innerHTML = radr;
-       });    
-</script>
-
+    <div id="myData"></div>
+    <script>
+        fetch('http://time.jsontest.com/')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(data) {
+            var mainContainer = document.getElementById("myData");
+            for (var i = 0; i < data.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = 'Date: ' + data[i].date + ' ' + data[i].time;
+                mainContainer.appendChild(div);
+            }
+        }
+    </script>
 </body>
-    
-    
-</script>
-    
-    
-
 </html>
-  
  
