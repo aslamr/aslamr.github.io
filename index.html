@@ -1,32 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JSON Test</title>
-</head>
-<body>
-    <div id="myData"></div>
-    <script>
-        fetch('covid.json')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                appendData(data);
-            })
-            .catch(function (err) {
-                console.log('error: ' + err);
-            });
-        function appendData(data) {
-            var mainContainer = document.getElementById("myData");
-            for (var i = 0; i < data.length; i++) {
-                var div = document.createElement("div");
-                div.innerHTML = 'Name: ' + data[i].today_new_deaths + ' ' + data[i].today_new_open_cases;
-                mainContainer.appendChild(div);
-            }
-        }
-    </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fetch & display data from a remote API using JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="cocktail"></div>
+    <div id="overlay"></div>
+    <script src="script.js"></script>
+const cocktailName = cocktail.strDrink;
+  const heading = document.createElement("h1");
+  heading.innerHTML = cocktailName;
+  cocktailDiv.appendChild(heading);
+
+  </body>
 </html>
