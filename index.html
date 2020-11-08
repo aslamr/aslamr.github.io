@@ -9,15 +9,9 @@
     <div class="mypanel"></div>
 
     <script>
-    $.getJSON('http://time.jsontest.com', function(data) {
-        
-        var text = `Date: ${data.date}<br>
-                    Time: ${data.time}<br>
-                    Unix time: ${data.milliseconds_since_epoch}`
-                    
-        
-        $(".mypanel").html(text);
-    });
+   fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => response.json())
+  .then(json => console.log(json))
     </script>
     
 </body>
